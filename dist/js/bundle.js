@@ -58,8 +58,7 @@ email=store[0].get("email");
         ), 
 
         React.createElement("div", {className: "col-md-4 col-md-offset-2 col-sm-12 bottom info"}, 
-          React.createElement("p", null, React.createElement("a", {href: "https://www.facebook.com/groups/284052025052403/?fref=ts"}, "Facebook")), 
-          React.createElement("p", null, React.createElement("a", {href: "https://twitter.com/gnomegorillagam"}, "Twitter"))
+          React.createElement("p", null, React.createElement("a", {href: "https://www.facebook.com/groups/284052025052403/?fref=ts"}, "Facebook"))
         )
       )
     )

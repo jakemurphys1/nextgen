@@ -57,7 +57,6 @@ email=store[0].get("email");
 
         <div className="col-md-4 col-md-offset-2 col-sm-12 bottom info">
           <p><a href="https://www.facebook.com/groups/284052025052403/?fref=ts">Facebook</a></p>
-          <p><a href="https://twitter.com/gnomegorillagam">Twitter</a></p>
         </div>
       </div>
     </div>
