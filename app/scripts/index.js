@@ -28,21 +28,25 @@ var Router = Backbone.Router.extend({
     "contact":"contact",
   },
   home:function(){
+    $(".maps").removeClass("hidden");
     ReactDOM.unmountComponentAtNode(homeContainer);
     ReactDOM.render(<HomeForm router={this}/>,homeContainer)
   },
   schedule:function(){
+      $(".maps").addClass("hidden");
     ReactDOM.unmountComponentAtNode(homeContainer);
     ReactDOM.render(<ScheduleForm router={this}/>,homeContainer)
   },
   details:function(id){
     console.log("id",id)
+      $(".maps").addClass("hidden");
     ReactDOM.unmountComponentAtNode(homeContainer);
     ReactDOM.render(<DetailForm curId={id} router={this}/>,homeContainer)
   },
   contact:function(){
+      $(".maps").addClass("hidden");
     ReactDOM.unmountComponentAtNode(homeContainer);
-    ReactDOM.render(<ContactForm router={this}/>,homeContainer)
+      ReactDOM.render(<ContactForm router={this}/>,homeContainer)
   },
 })
 

@@ -7,6 +7,7 @@ var $ = require("jquery")
 var Input = require("react-bootstrap/lib/Input")
 var Parse = require("parse")
 
+
 var Contact = React.createClass({displayName: "Contact",
   getInitialState:function(){
       return {
@@ -30,6 +31,7 @@ var Contact = React.createClass({displayName: "Contact",
         console.log("Event Server not find")
       }
   })
+
     },
   render:function(){
 var store = this.state.stores;
@@ -50,16 +52,14 @@ email=store[0].get("email");
     return(
     React.createElement("div", {className: "Total"}, 
       React.createElement("div", {className: "row contactUs"}, 
-                React.createElement("h1", null, "Contact Us"), 
-        React.createElement("div", {className: "col-md-4 col-md-offset-2 col-sm-12 bottom info"}, 
+            React.createElement("h1", null, "Contact Us"), 
+        React.createElement("div", {className: "col-xs-6 col-xs-offset-3 bottom"}, 
 
           React.createElement("p", null, "Phone: ", phone), 
-          React.createElement("p", null, "Email: ", email)
-        ), 
-
-        React.createElement("div", {className: "col-md-4 col-md-offset-2 col-sm-12 bottom info"}, 
-          React.createElement("p", null, React.createElement("a", {href: "https://www.facebook.com/groups/284052025052403/?fref=ts"}, "Facebook"))
+          React.createElement("p", null, "Email: ", email), 
+              React.createElement("p", null, React.createElement("a", {href: "https://www.facebook.com/groups/284052025052403/?fref=ts"}, "Facebook"))
         )
+
       )
     )
     )
@@ -295,7 +295,7 @@ email=store[0].get("email");
       ), 
       React.createElement("div", {className: "row tribute"}, 
         React.createElement("div", {className: "col-md-4"}, React.createElement("p", null, "Website designed and created by Jake Murphy")), 
-        React.createElement("div", {className: "col-md-4"}, React.createElement("p", null, React.createElement("a", {href: "http://jakemurphywebdesigner.com/"}, "jakemurphywebdesigner.com"))), 
+        React.createElement("div", {className: "col-md-4"}, React.createElement("p", null, React.createElement("a", {href: "http://jakemurphywebdeveloper.com/"}, "jakemurphywebdeveloper.com"))), 
         React.createElement("div", {className: "col-md-4"}, React.createElement("p", null, "Information courtesy of ", React.createElement("a", {href: "http://www.gaminglocal.com/"}, "gaminglocal.com")))
       )
     )
@@ -786,21 +786,25 @@ var Router = Backbone.Router.extend({
     "contact":"contact",
   },
   home:function(){
+    $(".maps").removeClass("hidden");
     ReactDOM.unmountComponentAtNode(homeContainer);
     ReactDOM.render(React.createElement(HomeForm, {router: this}),homeContainer)
   },
   schedule:function(){
+      $(".maps").addClass("hidden");
     ReactDOM.unmountComponentAtNode(homeContainer);
     ReactDOM.render(React.createElement(ScheduleForm, {router: this}),homeContainer)
   },
   details:function(id){
     console.log("id",id)
+      $(".maps").addClass("hidden");
     ReactDOM.unmountComponentAtNode(homeContainer);
     ReactDOM.render(React.createElement(DetailForm, {curId: id, router: this}),homeContainer)
   },
   contact:function(){
+      $(".maps").addClass("hidden");
     ReactDOM.unmountComponentAtNode(homeContainer);
-    ReactDOM.render(React.createElement(ContactForm, {router: this}),homeContainer)
+      ReactDOM.render(React.createElement(ContactForm, {router: this}),homeContainer)
   },
 })
 

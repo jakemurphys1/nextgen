@@ -5,6 +5,7 @@ var $ = require("jquery")
 var Input = require("react-bootstrap/lib/Input")
 var Parse = require("parse")
 
+
 var Contact = React.createClass({
   getInitialState:function(){
       return {
@@ -28,6 +29,7 @@ var Contact = React.createClass({
         console.log("Event Server not find")
       }
   })
+
     },
   render:function(){
 var store = this.state.stores;
@@ -48,16 +50,14 @@ email=store[0].get("email");
     return(
     <div className="Total">
       <div className="row contactUs">
-                <h1>Contact Us</h1>
-        <div className="col-md-4 col-md-offset-2 col-sm-12 bottom info">
+            <h1>Contact Us</h1>
+        <div className="col-xs-6 col-xs-offset-3 bottom">
 
           <p>Phone: {phone}</p>
           <p>Email: {email}</p>
+              <p><a href="https://www.facebook.com/groups/284052025052403/?fref=ts">Facebook</a></p>
         </div>
 
-        <div className="col-md-4 col-md-offset-2 col-sm-12 bottom info">
-          <p><a href="https://www.facebook.com/groups/284052025052403/?fref=ts">Facebook</a></p>
-        </div>
       </div>
     </div>
     )

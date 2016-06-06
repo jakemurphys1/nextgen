@@ -5867,7 +5867,8 @@ img {
     color: white;
     text-align: center; }
   .body .mainpagerow {
-    margin-top: 150px; }
+    margin-top: 150px;
+    margin-bottom: 50px; }
     .body .mainpagerow .mainpage {
       margin-top: 10px;
       height: 380px;
@@ -5886,6 +5887,7 @@ img {
           .body .mainpagerow .mainpage p {
             font-size: 20px; } }
   .body .mainbottom {
+    text-align: center;
     margin-top: 80px; }
 
 #text-carousel {
@@ -5948,5 +5950,22 @@ img {
     text-align: center; }
   .special1 .specialCol p {
     font-size: 30px; }
+
+.maps {
+  margin-top: 50px; }
+
+.contactUs h1 {
+  margin-bottom: 30px; }
+.contactUs p {
+  margin-left: 20px; }
+
+.maps {
+  margin: 100px auto; }
+  .maps .info img {
+    margin: auto;
+    margin-bottom: 30px;
+    border: black solid 5px;
+    border-radius: 5px;
+    width: 300px; }
 
 /*# sourceMappingURL=app.css.map */

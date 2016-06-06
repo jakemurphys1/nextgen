@@ -84,7 +84,7 @@ email=store[0].get("email");
       </div>
       <div className="row tribute">
         <div className="col-md-4"><p>Website designed and created by Jake Murphy</p></div>
-        <div className="col-md-4"><p><a href = "http://jakemurphywebdesigner.com/">jakemurphywebdesigner.com</a></p></div>
+        <div className="col-md-4"><p><a href = "http://jakemurphywebdeveloper.com/">jakemurphywebdeveloper.com</a></p></div>
         <div className="col-md-4"><p>Information courtesy of <a href="http://www.gaminglocal.com/">gaminglocal.com</a></p></div>
       </div>
     </div>
